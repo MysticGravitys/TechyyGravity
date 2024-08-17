@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TechyyGravity</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to TechyyGravity</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>Our Mission</h2>
+            <p>At TechyyGravity, our mission is to provide insightful analysis and the latest trends in technology. We aim to be your go-to source for technology news, updates, and in-depth articles that help you stay ahead in the fast-paced tech world.</p>
+
+            <h2>Meet the Team</h2>
+            <div id="teamMembers" class="team-members">
+                <!-- Team members will be loaded here dynamically -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechyyGravity. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sample data to demonstrate functionality
+        const teamMembers = [
+            {
+                name: 'God',
+                role: 'Supreme',
+                bio: 'God Lends Me His Divine Wisdom To Create Such An Wonderful Gravity Wesbite.',
+            },
+            {
+                name: 'Knowledge',
+                role: 'Admin',
+                bio: 'Without Knowledge This Wonderful Gravity Would Not Be Deployed.',
+            },
+            {
+                name: 'Trust',
+                role: 'Mod',
+                bio: 'Without Trusting Myself This Would Never Had Happend.',
+            },
+            {
+                name: 'MysticGravity',
+                role: 'Creator',
+                bio: 'I made this website so yeah!.',
+            }
+        ];
+
+        function loadTeamMembers() {
+            const container = document.getElementById('teamMembers');
+            teamMembers.forEach(member => {
+                const memberDiv = document.createElement('div');
+                memberDiv.className = 'team-member';
+                memberDiv.innerHTML = `
+                    <h3>${member.name}</h3>
+                    <p><strong>Role:</strong> ${member.role}</p>
+                    <p>${member.bio}</p>
+                `;
+                container.appendChild(memberDiv);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', loadTeamMembers);
+    </script>
+</body>
+</html>
